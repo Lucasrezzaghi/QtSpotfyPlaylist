@@ -45,8 +45,6 @@ public:
 
     QVector<QString> loadPlaylist();
 
-    int getSearchListSize();
-
     QString getPlaylistItem(int index);
 
     int connectToSpotify();

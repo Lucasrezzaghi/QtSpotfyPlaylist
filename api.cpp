@@ -61,11 +61,6 @@ int Api::getPlaylistSize(){
 }
 
 
-int Api::getSearchListSize(){
-    return searchMap.size();
-}
-
-
 QString Api::getPlaylistItem(int index){
     return playListUrls[index];
 }
