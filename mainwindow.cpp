@@ -50,7 +50,9 @@ void MainWindow::on_removeButton_clicked(){
             this->playlist->removeMedia(ui->lstPlaylist->currentRow());
             delete ui->lstPlaylist->takeItem(ui->lstPlaylist->row(ui->lstPlaylist->currentItem()));
         }
-        checkList.remove(ui->lstPlaylist->currentRow()+1);
+        if(checkList.size() != 0){
+            checkList.remove(ui->lstPlaylist->currentRow()+1);
+        }
     }
     else{
         this->showMessage("Nenhuma musica selecionada para ser removida");
