@@ -9,7 +9,6 @@
 #include <QDesktopServices>
 #include <QtNetworkAuth>
 #include <QMessageBox>
-#include <QSslSocket>
 
 
 
@@ -22,7 +21,7 @@ class Api: public QObject
 
 private:
     void granted();
-    void setupConnection();
+    void setupConnection(QString, QString);
     QMap<int, QString> searchMap;
     QVector<QString> playListUrls;
     QOAuth2AuthorizationCodeFlow spotifyApi;
@@ -47,7 +46,7 @@ public:
 
     QString getPlaylistItem(int index);
 
-    int connectToSpotify();
+    int connectToSpotify(QString, QString);
 
     void search(QString searchString, QListWidget * lstSearchResults);
 

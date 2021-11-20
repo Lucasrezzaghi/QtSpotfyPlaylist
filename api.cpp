@@ -11,13 +11,13 @@ Api::~Api(){
 }
 
 
-void Api::setupConnection(){
+void Api::setupConnection(QString id, QString secret){
     auto replyHandler = new QOAuthHttpServerReplyHandler(8080, this);
     spotifyApi.setReplyHandler(replyHandler);
     spotifyApi.setAuthorizationUrl(QUrl("https://accounts.spotify.com/authorize"));
     spotifyApi.setAccessTokenUrl(QUrl("https://accounts.spotify.com/api/token"));
-    spotifyApi.setClientIdentifier(clientId);
-    spotifyApi.setClientIdentifierSharedKey(clientSecret);
+    spotifyApi.setClientIdentifier(id);
+    spotifyApi.setClientIdentifierSharedKey(secret);
     spotifyApi.setScope("user-read-private user-top-read playlist-read-private playlist-modify-public playlist-modify-private");
 }
 
@@ -33,10 +33,10 @@ bool Api::isLogged(){
         return false;
 }
 
-int Api::connectToSpotify(){
+int Api::connectToSpotify(QString id, QString secret){
     try
     {
-        setupConnection();
+        setupConnection(id, secret);
         connect(&spotifyApi, &QOAuth2AuthorizationCodeFlow::authorizeWithBrowser, &QDesktopServices::openUrl);
         connect(&spotifyApi, &QOAuth2AuthorizationCodeFlow::granted, this, &Api::granted);
         return 0;
