@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     this->api = new Api();
     loadPlaylist();
-    api->connectToSpotify();
+    api->connectToSpotify(clientId, clientSecret);
     this->player = new QMediaPlayer(this);
     this->playlist = new QMediaPlaylist(this->player);
 
@@ -82,7 +82,7 @@ void MainWindow::on_playButton_clicked(){
         this->player->play();
     }
     else{
-        this->showMessage("selecionar musica na playlist");
+        this->showMessage("selecionar playlist");
     }
 }
 
