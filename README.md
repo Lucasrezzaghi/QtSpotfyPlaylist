@@ -1,5 +1,5 @@
 # QtSpotfyPlaylist
-Programa feito em qt para criar e executar uma playlist do spotify.
+Programa feito em qt c++ para criar e executar uma playlist do spotify.
 
 ## Para Funcionar
 Primeiramente é fundamental criar suas chaves para utilização da api do spotify(https://developer.spotify.com/dashboard/), logo após, atualizar o arquivo keys.h com as suas respectivas chaves. Quando o programa for aberto, clicar no botão "login" para autorizar a suas credencias
