@@ -1,5 +1,8 @@
 QT += testlib
 QT += core gui
+QT += networkauth
+QT += multimedia
+QT += widgets
 
 CONFIG += qt warn_on depend_includepath testcase
 
