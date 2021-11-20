@@ -14,10 +14,10 @@ EQ            = =
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_GUI_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR='"/home/spopooi/newTest/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug"' -DQT_QML_DEBUG
+DEFINES       = -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_TESTLIB_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR='"/home/spopooi/testaaaanodoo/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug"' -DQT_QML_DEBUG
 CFLAGS        = -pipe -g -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I../Tests -I. -I../../QtSpotfyPlaylist -I../../../Qt/5.15.2/gcc_64/include -I../../../Qt/5.15.2/gcc_64/include/QtGui -I../../../Qt/5.15.2/gcc_64/include/QtTest -I../../../Qt/5.15.2/gcc_64/include/QtCore -I. -I/usr/include/libdrm -I../../../Qt/5.15.2/gcc_64/mkspecs/linux-g++
+INCPATH       = -I../Tests -I. -I../../QtSpotfyPlaylist -I../../../Qt/5.15.2/gcc_64/include -I../../../Qt/5.15.2/gcc_64/include/QtMultimedia -I../../../Qt/5.15.2/gcc_64/include/QtWidgets -I../../../Qt/5.15.2/gcc_64/include/QtGui -I../../../Qt/5.15.2/gcc_64/include/QtTest -I../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth -I../../../Qt/5.15.2/gcc_64/include/QtNetwork -I../../../Qt/5.15.2/gcc_64/include/QtCore -I. -I/usr/include/libdrm -I../../../Qt/5.15.2/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/spopooi/Qt/5.15.2/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -37,10 +37,10 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = Tests1.0.0
-DISTDIR = /home/spopooi/newTest/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug/.tmp/Tests1.0.0
+DISTDIR = /home/spopooi/testaaaanodoo/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug/.tmp/Tests1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/spopooi/Qt/5.15.2/gcc_64/lib
-LIBS          = $(SUBLIBS) /home/spopooi/Qt/5.15.2/gcc_64/lib/libQt5Gui.so /home/spopooi/Qt/5.15.2/gcc_64/lib/libQt5Test.so /home/spopooi/Qt/5.15.2/gcc_64/lib/libQt5Core.so -lGL -lpthread   
+LIBS          = $(SUBLIBS) /home/spopooi/Qt/5.15.2/gcc_64/lib/libQt5Multimedia.so /home/spopooi/Qt/5.15.2/gcc_64/lib/libQt5Widgets.so /home/spopooi/Qt/5.15.2/gcc_64/lib/libQt5Gui.so /home/spopooi/Qt/5.15.2/gcc_64/lib/libQt5Test.so /home/spopooi/Qt/5.15.2/gcc_64/lib/libQt5NetworkAuth.so /home/spopooi/Qt/5.15.2/gcc_64/lib/libQt5Network.so /home/spopooi/Qt/5.15.2/gcc_64/lib/libQt5Core.so -lGL -lpthread   
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -236,6 +236,7 @@ DIST          = ../../../Qt/5.15.2/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/moc.prf \
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/testlib_defines.prf \
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/unix/opengl.prf \
+		../../../Qt/5.15.2/gcc_64/mkspecs/features/uic.prf \
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/unix/thread.prf \
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/qml_debug.prf \
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/qmake_use.prf \
@@ -436,6 +437,7 @@ Makefile: ../Tests/Tests.pro ../../../Qt/5.15.2/gcc_64/mkspecs/linux-g++/qmake.c
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/moc.prf \
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/testlib_defines.prf \
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/unix/opengl.prf \
+		../../../Qt/5.15.2/gcc_64/mkspecs/features/uic.prf \
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/unix/thread.prf \
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/qml_debug.prf \
 		../../../Qt/5.15.2/gcc_64/mkspecs/features/qmake_use.prf \
@@ -625,6 +627,7 @@ Makefile: ../Tests/Tests.pro ../../../Qt/5.15.2/gcc_64/mkspecs/linux-g++/qmake.c
 ../../../Qt/5.15.2/gcc_64/mkspecs/features/moc.prf:
 ../../../Qt/5.15.2/gcc_64/mkspecs/features/testlib_defines.prf:
 ../../../Qt/5.15.2/gcc_64/mkspecs/features/unix/opengl.prf:
+../../../Qt/5.15.2/gcc_64/mkspecs/features/uic.prf:
 ../../../Qt/5.15.2/gcc_64/mkspecs/features/unix/thread.prf:
 ../../../Qt/5.15.2/gcc_64/mkspecs/features/qml_debug.prf:
 ../../../Qt/5.15.2/gcc_64/mkspecs/features/qmake_use.prf:
@@ -660,14 +663,14 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) $(TARGET) 
-	-$(DEL_FILE) /home/spopooi/newTest/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug/target_wrapper.sh .qmake.stash
+	-$(DEL_FILE) /home/spopooi/testaaaanodoo/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug/target_wrapper.sh .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
 ####### Sub-libraries
 
 check: first
-	/home/spopooi/newTest/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug/target_wrapper.sh $(TESTRUNNER) ./$(QMAKE_TARGET) $(TESTARGS)
+	/home/spopooi/testaaaanodoo/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug/target_wrapper.sh $(TESTRUNNER) ./$(QMAKE_TARGET) $(TESTARGS)
 
 mocclean: compiler_moc_header_clean compiler_moc_objc_header_clean compiler_moc_source_clean
 
@@ -687,10 +690,9 @@ compiler_moc_header_make_all: moc_api.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_api.cpp
 moc_api.cpp: ../api.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/QObject \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qobject.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qnamespace.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QOAuth2AuthorizationCodeFlow \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth2authorizationcodeflow.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthglobal.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qglobal.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qconfig.h \
@@ -712,19 +714,23 @@ moc_api.cpp: ../api.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qmutex.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qnumeric.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qversiontagging.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauth2.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qdatetime.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstring.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qchar.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qbytearray.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qrefcount.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qnamespace.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qarraydata.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringliteral.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringalgorithms.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringview.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringbuilder.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qshareddata.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qhash.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qiterator.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qlist.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qalgorithms.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qiterator.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qhashfunctions.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qpair.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qvector.h \
@@ -734,37 +740,290 @@ moc_api.cpp: ../api.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringlist.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qregexp.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauth.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qurl.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qurlquery.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qobject.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qcoreevent.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qscopedpointer.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qmetatype.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qvarlengtharray.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qcontainerfwd.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qobject_impl.h \
-		../keys.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/QString \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/QSettings \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qsettings.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qvariant.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qmap.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qdebug.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qhash.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qtextstream.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qiodevice.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qlocale.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qshareddata.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qset.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qcontiguouscache.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qsharedpointer.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qsharedpointer_impl.h \
-		../../../Qt/5.15.2/gcc_64/include/QtGui/QDesktopServices \
-		../../../Qt/5.15.2/gcc_64/include/QtGui/qdesktopservices.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QMainWindow \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
 		../../../Qt/5.15.2/gcc_64/include/QtGui/qtguiglobal.h \
 		../../../Qt/5.15.2/gcc_64/include/QtGui/qtgui-config.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qwidget.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qwindowdefs_win.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmargins.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qpaintdevice.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qrect.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsize.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qpalette.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qcolor.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qrgb.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qrgba64.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qbrush.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qmatrix.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qpolygon.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qregion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qdatastream.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qline.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qtransform.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qimage.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qpixelformat.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qpixmap.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qfont.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qfontmetrics.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qfontinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qsizepolicy.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qcursor.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qkeysequence.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qevent.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfile.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfiledevice.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qvector2d.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qtouchdevice.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qicon.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QObject \
+		../keys.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QString \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QSettings \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsettings.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QListWidgetItem \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qlistwidget.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qlistview.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qvalidator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qslider.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qstyle.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qrubberband.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/QDesktopServices \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qdesktopservices.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstandardpaths.h \
-		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QtNetworkAuth \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QtNetworkAuthDepends \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QtCore \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QtCoreDepends \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstractanimation.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qeventloop.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstractproxymodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstractstate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstracttransition.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qanimationgroup.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qarraydataops.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qarraydatapointer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qbasictimer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qbitarray.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qbuffer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qbytearraymatcher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcache.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcalendar.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborarray.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborvalue.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborcommon.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/quuid.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcbormap.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborstream.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborstreamreader.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfloat16.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborstreamwriter.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcollator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcommandlineoption.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcommandlineparser.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qconcatenatetablesproxymodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcryptographichash.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qdeadlinetimer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qelapsedtimer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qdir.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfileinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qdiriterator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qeasingcurve.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qendian.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qeventtransition.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qexception.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfactoryinterface.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfileselector.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QStringList \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfinalstate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfuture.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfutureinterface.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qrunnable.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qresultstore.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfuturewatcher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qhistorystate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qidentityproxymodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qisenum.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qjsonarray.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qjsonvalue.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qjsondocument.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qjsonobject.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qlibrary.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qlibraryinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qversionnumber.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qlinkedlist.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qlockfile.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qloggingcategory.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmath.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmetaobject.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmimedata.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmimedatabase.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmimetype.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qoperatingsystemversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qpauseanimation.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qplugin.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qpointer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qpluginloader.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qprocess.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qpropertyanimation.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qvariantanimation.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qqueue.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qrandom.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qreadwritelock.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qresource.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsavefile.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qscopeguard.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsemaphore.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsharedmemory.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsignalmapper.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsignaltransition.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsocketnotifier.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qstack.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qstate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qstatemachine.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qstorageinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringlistmodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsystemsemaphore.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtemporarydir.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtemporaryfile.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtextcodec.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qthread.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qthreadpool.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qthreadstorage.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtimeline.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtimer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtimezone.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtranslator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtransposeproxymodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtypetraits.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QDeadlineTimer \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qwineventnotifier.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qxmlstream.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtcoreversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QtNetwork \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QtNetworkDepends \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qabstractnetworkcache.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QUrl \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QVariant \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qabstractsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qauthenticator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qdnslookup.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qdtls.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslerror.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslcertificate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qssl.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QFlags \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhostaddress.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhostinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhstspolicy.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhttp2configuration.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhttpmultipart.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QByteArray \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QIODevice \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QNetworkRequest \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qlocalserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qlocalsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QVector \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QSslConfiguration \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslconfiguration.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QMetaType \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkconfigmanager.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkcookie.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QList \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkcookiejar.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkdatagram.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkdiskcache.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkinterface.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkproxy.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkreply.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QNetworkAccessManager \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworksession.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qocspresponse.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qpassworddigestor.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QCryptographicHash \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsctpserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtcpserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsctpsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslcertificateextension.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslcipher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qssldiffiehellmanparameters.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslellipticcurve.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QHash \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslkey.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qudpsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtnetworkversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauthreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth1.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth1signature.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthhttpserverreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthoobreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qtnetworkauthversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QMessageBox \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qmessagebox.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qdialog.h \
 		moc_predefs.h \
 		../../../Qt/5.15.2/gcc_64/bin/moc
-	/home/spopooi/Qt/5.15.2/gcc_64/bin/moc $(DEFINES) --include /home/spopooi/newTest/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug/moc_predefs.h -I/home/spopooi/Qt/5.15.2/gcc_64/mkspecs/linux-g++ -I/home/spopooi/newTest/QtSpotfyPlaylist/Tests -I/home/spopooi/newTest/QtSpotfyPlaylist -I/home/spopooi/Qt/5.15.2/gcc_64/include -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtGui -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtTest -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtCore -I. -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../api.h -o moc_api.cpp
+	/home/spopooi/Qt/5.15.2/gcc_64/bin/moc $(DEFINES) --include /home/spopooi/testaaaanodoo/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug/moc_predefs.h -I/home/spopooi/Qt/5.15.2/gcc_64/mkspecs/linux-g++ -I/home/spopooi/testaaaanodoo/QtSpotfyPlaylist/Tests -I/home/spopooi/testaaaanodoo/QtSpotfyPlaylist -I/home/spopooi/Qt/5.15.2/gcc_64/include -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtMultimedia -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtWidgets -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtGui -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtTest -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtNetworkAuth -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtNetwork -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtCore -I. -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../api.h -o moc_api.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1083,15 +1342,85 @@ tst_testsapi.moc: ../Tests/tst_testsapi.cpp \
 		../../../Qt/5.15.2/gcc_64/include/QtTest/qttestversion.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/QCoreApplication \
 		../api.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QOAuth2AuthorizationCodeFlow \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth2authorizationcodeflow.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthglobal.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauth2.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauth.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QMainWindow \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtabwidget.h \
 		../keys.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/QSettings \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QListWidgetItem \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qlistwidget.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qlistview.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qvalidator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qslider.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qstyle.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qrubberband.h \
 		../../../Qt/5.15.2/gcc_64/include/QtGui/QDesktopServices \
 		../../../Qt/5.15.2/gcc_64/include/QtGui/qdesktopservices.h \
-		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QtNetworkAuth \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QtNetworkAuthDepends \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QtNetwork \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QtNetworkDepends \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qabstractnetworkcache.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qauthenticator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qdnslookup.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qdtls.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhostinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhstspolicy.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhttp2configuration.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhttpmultipart.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QByteArray \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qlocalserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qlocalsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkconfigmanager.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkcookiejar.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkdatagram.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkdiskcache.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkinterface.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkproxy.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworksession.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qocspresponse.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qpassworddigestor.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QCryptographicHash \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsctpserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtcpserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsctpsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslcertificateextension.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslcipher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qssldiffiehellmanparameters.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslellipticcurve.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QHash \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslkey.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qudpsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtnetworkversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauthreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth1.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth1signature.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthhttpserverreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthoobreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qtnetworkauthversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QMessageBox \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qmessagebox.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qdialog.h \
 		moc_predefs.h \
 		../../../Qt/5.15.2/gcc_64/bin/moc
-	/home/spopooi/Qt/5.15.2/gcc_64/bin/moc $(DEFINES) --include /home/spopooi/newTest/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug/moc_predefs.h -I/home/spopooi/Qt/5.15.2/gcc_64/mkspecs/linux-g++ -I/home/spopooi/newTest/QtSpotfyPlaylist/Tests -I/home/spopooi/newTest/QtSpotfyPlaylist -I/home/spopooi/Qt/5.15.2/gcc_64/include -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtGui -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtTest -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtCore -I. -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../Tests/tst_testsapi.cpp -o tst_testsapi.moc
+	/home/spopooi/Qt/5.15.2/gcc_64/bin/moc $(DEFINES) --include /home/spopooi/testaaaanodoo/QtSpotfyPlaylist/build-Tests-Desktop_Qt_5_15_2_GCC_64bit-Debug/moc_predefs.h -I/home/spopooi/Qt/5.15.2/gcc_64/mkspecs/linux-g++ -I/home/spopooi/testaaaanodoo/QtSpotfyPlaylist/Tests -I/home/spopooi/testaaaanodoo/QtSpotfyPlaylist -I/home/spopooi/Qt/5.15.2/gcc_64/include -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtMultimedia -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtWidgets -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtGui -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtTest -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtNetworkAuth -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtNetwork -I/home/spopooi/Qt/5.15.2/gcc_64/include/QtCore -I. -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../Tests/tst_testsapi.cpp -o tst_testsapi.moc
 
+compiler_uic_make_all:
+compiler_uic_clean:
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
 compiler_yacc_impl_make_all:
@@ -1413,19 +1742,86 @@ tst_testsapi.o: ../Tests/tst_testsapi.cpp ../../../Qt/5.15.2/gcc_64/include/QtTe
 		../../../Qt/5.15.2/gcc_64/include/QtTest/qttestversion.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/QCoreApplication \
 		../api.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QOAuth2AuthorizationCodeFlow \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth2authorizationcodeflow.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthglobal.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauth2.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauth.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QMainWindow \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtabwidget.h \
 		../keys.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/QSettings \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QListWidgetItem \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qlistwidget.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qlistview.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qvalidator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qslider.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qstyle.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qrubberband.h \
 		../../../Qt/5.15.2/gcc_64/include/QtGui/QDesktopServices \
 		../../../Qt/5.15.2/gcc_64/include/QtGui/qdesktopservices.h \
-		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QtNetworkAuth \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QtNetworkAuthDepends \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QtNetwork \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QtNetworkDepends \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qabstractnetworkcache.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qauthenticator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qdnslookup.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qdtls.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhostinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhstspolicy.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhttp2configuration.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhttpmultipart.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QByteArray \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qlocalserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qlocalsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkconfigmanager.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkcookiejar.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkdatagram.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkdiskcache.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkinterface.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkproxy.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworksession.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qocspresponse.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qpassworddigestor.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QCryptographicHash \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsctpserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtcpserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsctpsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslcertificateextension.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslcipher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qssldiffiehellmanparameters.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslellipticcurve.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QHash \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslkey.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qudpsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtnetworkversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauthreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth1.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth1signature.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthhttpserverreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthoobreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qtnetworkauthversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QMessageBox \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qmessagebox.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qdialog.h \
 		tst_testsapi.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tst_testsapi.o ../Tests/tst_testsapi.cpp
 
 api.o: ../api.cpp ../api.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/QObject \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qobject.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qnamespace.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QOAuth2AuthorizationCodeFlow \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth2authorizationcodeflow.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthglobal.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qglobal.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qconfig.h \
@@ -1447,19 +1843,23 @@ api.o: ../api.cpp ../api.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qmutex.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qnumeric.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qversiontagging.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauth2.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qdatetime.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstring.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qchar.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qbytearray.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qrefcount.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qnamespace.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qarraydata.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringliteral.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringalgorithms.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringview.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringbuilder.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qshareddata.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qhash.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qiterator.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qlist.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qalgorithms.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qiterator.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qhashfunctions.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qpair.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qvector.h \
@@ -1469,34 +1869,287 @@ api.o: ../api.cpp ../api.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringlist.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qregexp.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauth.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qurl.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qurlquery.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qobject.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qcoreevent.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qscopedpointer.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qmetatype.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qvarlengtharray.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qcontainerfwd.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qobject_impl.h \
-		../keys.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/QString \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/QSettings \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qsettings.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qvariant.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qmap.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qdebug.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qhash.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qtextstream.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qiodevice.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qlocale.h \
-		../../../Qt/5.15.2/gcc_64/include/QtCore/qshareddata.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qset.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qcontiguouscache.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qsharedpointer.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qsharedpointer_impl.h \
-		../../../Qt/5.15.2/gcc_64/include/QtGui/QDesktopServices \
-		../../../Qt/5.15.2/gcc_64/include/QtGui/qdesktopservices.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QMainWindow \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
 		../../../Qt/5.15.2/gcc_64/include/QtGui/qtguiglobal.h \
 		../../../Qt/5.15.2/gcc_64/include/QtGui/qtgui-config.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qwidget.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qwindowdefs_win.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmargins.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qpaintdevice.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qrect.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsize.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qpalette.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qcolor.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qrgb.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qrgba64.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qbrush.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qmatrix.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qpolygon.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qregion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qdatastream.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qline.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qtransform.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qimage.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qpixelformat.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qpixmap.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qfont.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qfontmetrics.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qfontinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qsizepolicy.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qcursor.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qkeysequence.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qevent.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfile.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfiledevice.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qvector2d.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qtouchdevice.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qicon.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QObject \
+		../keys.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QString \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QSettings \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsettings.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QListWidgetItem \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qlistwidget.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qlistview.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qvalidator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qslider.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qstyle.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qrubberband.h \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/QDesktopServices \
+		../../../Qt/5.15.2/gcc_64/include/QtGui/qdesktopservices.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/qstandardpaths.h \
-		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QtNetworkAuth \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/QtNetworkAuthDepends \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QtCore \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QtCoreDepends \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstractanimation.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qeventloop.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstractproxymodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstractstate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qabstracttransition.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qanimationgroup.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qarraydataops.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qarraydatapointer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qbasictimer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qbitarray.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qbuffer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qbytearraymatcher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcache.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcalendar.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborarray.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborvalue.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborcommon.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/quuid.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcbormap.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborstream.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborstreamreader.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfloat16.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcborstreamwriter.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcollator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcommandlineoption.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcommandlineparser.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qconcatenatetablesproxymodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qcryptographichash.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qdeadlinetimer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qelapsedtimer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qdir.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfileinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qdiriterator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qeasingcurve.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qendian.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qeventtransition.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qexception.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfactoryinterface.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfileselector.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QStringList \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfinalstate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfuture.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfutureinterface.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qrunnable.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qresultstore.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qfuturewatcher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qhistorystate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qidentityproxymodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qisenum.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qjsonarray.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qjsonvalue.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qjsondocument.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qjsonobject.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qlibrary.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qlibraryinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qversionnumber.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qlinkedlist.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qlockfile.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qloggingcategory.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmath.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmetaobject.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmimedata.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmimedatabase.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qmimetype.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qoperatingsystemversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qpauseanimation.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qplugin.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qpointer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qpluginloader.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qprocess.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qpropertyanimation.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qvariantanimation.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qqueue.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qrandom.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qreadwritelock.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qresource.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsavefile.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qscopeguard.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsemaphore.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsharedmemory.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsignalmapper.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsignaltransition.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsocketnotifier.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qstack.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qstate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qstatemachine.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qstorageinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qstringlistmodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qsystemsemaphore.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtemporarydir.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtemporaryfile.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtextcodec.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qthread.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qthreadpool.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qthreadstorage.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtimeline.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtimer.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtimezone.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtranslator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtransposeproxymodel.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtypetraits.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QDeadlineTimer \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qwineventnotifier.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qxmlstream.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/qtcoreversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QtNetwork \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QtNetworkDepends \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qabstractnetworkcache.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QUrl \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QVariant \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qabstractsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qauthenticator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qdnslookup.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qdtls.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslerror.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslcertificate.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qssl.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QFlags \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhostaddress.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhostinfo.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhstspolicy.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhttp2configuration.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qhttpmultipart.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QByteArray \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QIODevice \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QNetworkRequest \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qlocalserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qlocalsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QVector \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QSslConfiguration \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslconfiguration.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QMetaType \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkconfigmanager.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkcookie.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QList \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkcookiejar.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkdatagram.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkdiskcache.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkinterface.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkproxy.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkreply.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/QNetworkAccessManager \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qnetworksession.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qocspresponse.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qpassworddigestor.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QCryptographicHash \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsctpserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtcpserver.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsctpsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslcertificateextension.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslcipher.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qssldiffiehellmanparameters.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslellipticcurve.h \
+		../../../Qt/5.15.2/gcc_64/include/QtCore/QHash \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qsslkey.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qudpsocket.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetwork/qtnetworkversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qabstractoauthreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth1.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauth1signature.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthhttpserverreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qoauthoobreplyhandler.h \
+		../../../Qt/5.15.2/gcc_64/include/QtNetworkAuth/qtnetworkauthversion.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/QMessageBox \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qmessagebox.h \
+		../../../Qt/5.15.2/gcc_64/include/QtWidgets/qdialog.h \
 		../../../Qt/5.15.2/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o api.o ../api.cpp
 
